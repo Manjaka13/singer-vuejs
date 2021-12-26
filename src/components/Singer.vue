@@ -1,6 +1,14 @@
 <template>
-	<div class="singer">
-		<h1 class="singer__title">Hello from {{value}} !</h1>
+	<div>
+		<Navbar />
+		<div class="spacing"></div>
+		<Produits />
+		<div class="spacing-between-components"></div>
+		<Service />
+		<div class="spacing-between-components"></div>
+		<RDV />
+		<div class="spacing-between-components"></div>
+		<Footer />
 	</div>
 </template>
 
@@ -9,19 +17,32 @@
 	Entry point for vue components
 */
 
+import Navbar from "./Navbar.vue";
+import Service from "./Service.vue";
+import Produits from "./Produits.vue";
+import RDV from "./RDV.vue";
+import Footer from "./Footer.vue";
+
 export default {
 	name: "Singer",
-	data() {
-		return {
-			value: "Vue"
-		};
+	components: {
+		Navbar,
+		Service,
+		Produits,
+		RDV,
+		Footer,
 	},
 };
 </script>
 
 <style lang="css">
-	.singer__title {
-		padding: 20px;
-		color: rgb(80, 80, 80);
-	}
+.spacing {
+	overflow: hidden;
+	margin-top: 126px;
+}
+
+.spacing-between-components {
+	overflow: hidden;
+	margin-top: 50px;
+}
 </style>
