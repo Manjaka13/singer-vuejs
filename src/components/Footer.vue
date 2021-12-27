@@ -11,24 +11,24 @@
 				<div class="separator"></div>
 				<ul class="list">
 					<li class="list-item">
-						<span class="link" title="Voir">
+						<span title="e-mail">
 							<Icon icon="{faAddressCard}" />
 							contact@singerfrance.fr
 						</span>
 					</li>
 					<li class="list-item">
-						<span class="link" title="Voir">
+						<span title="telephone">
 							<Icon icon="{faPhone}" /> 02 23 62 34 82
 						</span>
 					</li>
 
 					<li class="list-item">
-						<span class="link" title="Facebook">
+						<span title="Facebook">
 							<Icon icon="{faPhone}" /> Facebook here
 						</span>
 					</li>
 					<li class="list-item">
-						<span class="link" title="Instagram">
+						<span title="Instagram">
 							<Icon icon="{faPhone}" /> Instagram here
 						</span>
 					</li>
@@ -66,12 +66,14 @@
 
 export default {
 	name: "Footer",
+	components: {},
 };
 </script>
 
 <style lang="css">
 * {
 	list-style: none;
+	text-decoration: none;
 }
 
 .footer {
@@ -142,5 +144,9 @@ export default {
 	background: #e30044;
 	color: white;
 	cursor: pointer;
+}
+
+.map {
+	width: 300px;
 }
 </style>

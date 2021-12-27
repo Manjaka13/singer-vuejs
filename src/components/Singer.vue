@@ -9,6 +9,8 @@
 		<RDV />
 		<div class="spacing-between-components"></div>
 		<Footer />
+
+		<Copyright />
 	</div>
 </template>
 
@@ -22,6 +24,7 @@ import Service from "./Service.vue";
 import Produits from "./Produits.vue";
 import RDV from "./RDV.vue";
 import Footer from "./Footer.vue";
+import Copyright from "./Copyright.vue";
 
 export default {
 	name: "Singer",
@@ -31,6 +34,7 @@ export default {
 		Produits,
 		RDV,
 		Footer,
+		Copyright,
 	},
 };
 </script>
