@@ -64,9 +64,23 @@
 	Entry point for vue components
 */
 
+/*  Page display blank  if I put these
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+	faAddressCard,
+	faPhone,
+	faMapMarkerAlt,
+	faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faAddressCard, faPhone, faMapMarkerAlt, faEnvelope);*/
+
 export default {
 	name: "Footer",
-	components: {},
+	components: {
+		//Icon: FontAwesomeIcon,
+	},
 };
 </script>
 
