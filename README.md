@@ -23,3 +23,11 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Fix leaflet error
+
+Sometimes, somehow the leaflet's dependency is not install. Run the following command line to fix this : 
+
+```
+npm i leaflet
+```
