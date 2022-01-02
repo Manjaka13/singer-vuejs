@@ -33,9 +33,7 @@ npm i leaflet
 ```
 
 ### Sass loader issues
-
-# /!\ if you work with vue@2.6.12, it seems sass-loader@11.0.0 doesn't work
-# So, in terminal:
+Seems to work for me :/
 
 ```
 yarn add node-sass sass-loader@10.1.1
