@@ -31,3 +31,13 @@ Sometimes, somehow the leaflet's dependency is not install. Run the following co
 ```
 npm i leaflet
 ```
+
+### Sass loader issues
+
+# /!\ if you work with vue@2.6.12, it seems sass-loader@11.0.0 doesn't work
+# So, in terminal:
+
+```
+yarn add node-sass sass-loader@10.1.1
+```
+
