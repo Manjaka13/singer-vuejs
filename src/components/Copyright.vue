@@ -16,11 +16,9 @@
         >
           Hari</a
         >
-        ,
       </p>
       <p className="right">
-        Copyright © {{ new Date().getFullYear() }} Singer France, Tous droits
-        réservés.
+        Copyright © {{ new Date().getFullYear() }} Singer France, Tous droits réservés.
       </p>
     </div>
   </section>
@@ -43,6 +41,7 @@ export default {
 
 .container-copyright {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
