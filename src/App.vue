@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<Navbar />
+		<!-- <Navbar /> -->
+		<Navigation />
 		<div class="spacing"></div>
 		<Produits />
 		<div class="spacing-between-components"></div>
@@ -19,7 +20,8 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+// import Navbar from "./components/Navbar.vue";
+import Navigation from "./components/Navigation.vue";
 import Produits from "./components/Produits.vue";
 import Service from "./components/Service.vue";
 import Footer from "./components/Footer.vue";
@@ -30,7 +32,7 @@ import Popup from "./components/Popup.vue";
 export default {
 	name: "App",
 	components: {
-		Navbar,
+		Navigation,
 		Produits,
 		Service,
 		RDV,
