@@ -117,19 +117,6 @@ export default {
 	color: #e30044;
 }
 
-@keyframes rotateAnimation {
-	from {
-		transform: rotateY(0deg);
-	}
-	to {
-		transform: rotateY(360deg);
-	}
-}
-
-.navigation--opened .navigation__logo-box:first-child .navigation__image {
-	animation: rotateAnimation 2s linear infinite;
-}
-
 @media only screen and (max-width: 400px) {
 	.navigation__logo {
 		height: 50%;
