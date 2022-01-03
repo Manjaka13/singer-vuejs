@@ -2,14 +2,18 @@
 	<section class="contacts">
 		<div class="container contacts__container">
 			<div class="contacts__box">
-				<h2 class="contacts__title"><Icon :icon="['fas', 'map-marker-alt']" /> Localisation</h2>
+				<h2 class="contacts__title">
+					<Icon :icon="['fas', 'map-marker-alt']" /> Localisation
+				</h2>
 				<div class="contacts__separator"></div>
 				<div class="contacts__map-box">
-					<p>Map here</p>
+					<Map />
 				</div>
 			</div>
 			<div class="contacts__box">
-				<h2 class="contacts__title"><Icon :icon="['fas', 'envelope']" /> Nous contacter</h2>
+				<h2 class="contacts__title">
+					<Icon :icon="['fas', 'envelope']" /> Nous contacter
+				</h2>
 				<div class="contacts__separator"></div>
 				<ul class="contacts__list">
 					<li
@@ -17,19 +21,30 @@
 						:key="key"
 						class="contacts__item"
 					>
-						<a v-if="contact?.link" :href="contact.link" class="contacts__link" title="Aller voir">
-							<Icon :icon="contact.icon" /> {{contact.content}}
+						<a
+							v-if="contact?.link"
+							:href="contact.link"
+							class="contacts__link"
+							title="Aller voir"
+						>
+							<Icon :icon="contact.icon" /> {{ contact.content }}
 						</a>
 						<span v-else>
-							<Icon :icon="contact.icon" /> {{contact.content}}
+							<Icon :icon="contact.icon" /> {{ contact.content }}
 						</span>
 					</li>
 				</ul>
 			</div>
 			<div class="contacts__box">
-				<h2 class="contacts__title"><Icon :icon="['fas', 'calendar-alt']" /> Ouvertures</h2>
+				<h2 class="contacts__title">
+					<Icon :icon="['fas', 'calendar-alt']" /> Ouvertures
+				</h2>
 				<div class="contacts__separator"></div>
-				<p class="contacts__about">Notre magasin est ouvert en semaine, n'hésitez pas à prendre contact avec nous les offres promotionnelles et venir nous voir directement !</p>
+				<p class="contacts__about">
+					Notre magasin est ouvert en semaine, n'hésitez pas à prendre
+					contact avec nous les offres promotionnelles et venir nous
+					voir directement !
+				</p>
 				<p class="contacts__hours">Horaires: 9h à 11h - 14h à 18h</p>
 				<div class="contacts__calendar">
 					<div
@@ -37,25 +52,31 @@
 						:key="key"
 						class="contacts__calendar-col"
 					>
-						<div class="contacts__calendar-row">{{calendar.day}}</div>
-						<div :class="calendar.opened ? 'contacts__calendar-row green' : 'contacts__calendar-row red'">
-							<Icon v-if="calendar.opened" :icon="['fas', 'check-circle']" />
+						<div class="contacts__calendar-row">
+							{{ calendar.day }}
+						</div>
+						<div
+							:class="
+								calendar.opened
+									? 'contacts__calendar-row green'
+									: 'contacts__calendar-row red'
+							"
+						>
+							<Icon
+								v-if="calendar.opened"
+								:icon="['fas', 'check-circle']"
+							/>
 							<Icon v-else :icon="['fas', 'times-circle']" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="container contacts__bottom">
-			<div class="contacts__bottom-separator"></div>
-			<p class="contacts__bottom-phrase">Singer, la marque de référence en matière de couture : 165 ans de savoir-faire et de notoriété grâce à la qualité, la technologie et la longévité de ses machines à coudre. Notre marque propose aujourd’hui une large gamme de machines à coudre, brodeuses, surjeteuses et accessoires couture.</p>
-			<p class="contacts__bottom-phrase">Singer bénéficie surtout d’une organisation constituée de professionnels au service de la créativité et du confort de leurs utilisatrices couvrant la quasi-totalité du territoire français. Conseils, démonstrations, formations ou encore cours de couture sont autant d’atouts qui participent à la qualité du service de l’enseigne.</p>
-			<p class="contacts__bottom-phrase">Imaginez, créez, recyclez, customisez sans limite avec les machines à coudre SINGER : « Elles ont la technique, vous avez du talent ! »</p>
-		</div> -->
 	</section>
 </template>
 
 <script>
+import Map from "./Map.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as Icon } from "@fortawesome/vue-fontawesome";
 import {
@@ -82,69 +103,70 @@ library.add(
 export default {
 	name: "Contacts",
 	components: {
-		Icon
+		Icon,
+		Map,
 	},
 	data() {
 		return {
 			contacts: [
 				{
-					icon: ['fas', 'phone'],
-					content: "+33 67 127 891 12"
+					icon: ["fas", "phone"],
+					content: "+33 67 127 891 12",
 				},
 				{
-					icon: ['fas', 'envelope'],
-					content: "chantepie@singer.fr"
+					icon: ["fas", "envelope"],
+					content: "chantepie@singer.fr",
 				},
 				{
-					icon: ['fab', 'facebook'],
+					icon: ["fab", "facebook"],
 					content: "Notre page Facebook",
-					link: "https://facebook.com"
+					link: "https://facebook.com",
 				},
 				{
-					icon: ['fab', 'instagram'],
+					icon: ["fab", "instagram"],
 					content: "Nous sommes sur Insta !",
-					link: "https://instagram.com"
-				}
+					link: "https://instagram.com",
+				},
 			],
 			calendars: [
 				{
 					day: "L",
 					opening: "Matin fermé - 14h à 18h",
-					opened: true
+					opened: true,
 				},
 				{
 					day: "M",
 					opening: "9h à 11h - 14h à 18h",
-					opened: true
+					opened: true,
 				},
 				{
 					day: "M",
 					opening: "9h à 11h - Fermé après-midi",
-					opened: true
+					opened: true,
 				},
 				{
 					day: "J",
 					opening: "9h à 11h - 14h à 18h",
-					opened: true
+					opened: true,
 				},
 				{
 					day: "V",
 					opening: "9h à 11h - 14h à 18h",
-					opened: true
+					opened: true,
 				},
 				{
 					day: "S",
 					opening: "Etablissement fermé.",
-					opened: false
+					opened: false,
 				},
 				{
 					day: "D",
 					opening: "Etablissement fermé.",
-					opened: false
+					opened: false,
 				},
-			]
+			],
 		};
-	}
+	},
 };
 </script>
 
