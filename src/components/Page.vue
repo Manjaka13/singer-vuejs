@@ -11,6 +11,8 @@
 			@menuToggle="menuToggle"
 		/>
 
+		<ChoixMachine />
+
 
 		<p>STARTOOOO !!!!</p>
 		<p>Filling up space</p>
@@ -69,6 +71,7 @@
 <script>
 import Navigation from "./Navigation.vue";
 import Menu from "./Menu.vue";
+import ChoixMachine from "./ChoixMachine.vue";
 import Contacts from "./Contacts.vue";
 import Copyright from "./Copyright.vue";
 
@@ -78,6 +81,7 @@ export default {
 		Navigation,
 		Menu,
 		Contacts,
+		ChoixMachine,
 		Copyright
 	},
 	data() {
