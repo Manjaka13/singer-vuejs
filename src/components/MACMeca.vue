@@ -18,7 +18,7 @@
 
 		<template v-slot:body>
 			<div class="content-left">
-				<Carousel />
+				<!-- <Carousel /> -->
 			</div>
 
 			<div class="content-right">
@@ -30,14 +30,14 @@
 </template>
 
 <script>
-import Carousel from "./Carousel.vue";
+// import Carousel from "./Carousel.vue";
 import Modal from "./Modal.vue";
 
 export default {
 	name: "MACMeca",
 	components: {
 		Modal,
-		Carousel,
+		// Carousel,
 	},
 	props: {
 		marque: {

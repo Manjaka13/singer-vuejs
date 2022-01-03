@@ -13,7 +13,7 @@ import {
 	faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import VueGallery from "vue-gallery";
+// import VueGallery from "vue-gallery";
 
 library.add(
 	faChevronCircleLeft,
@@ -28,4 +28,4 @@ library.add(
 	faInstagram
 );
 
-createApp(App).component("Icon", FontAwesomeIcon).use(VueGallery).mount("#app");
+createApp(App).component("Icon", FontAwesomeIcon).mount("#app");
