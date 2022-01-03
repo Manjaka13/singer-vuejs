@@ -2,7 +2,7 @@
 	<section class="contacts">
 		<div class="container contacts__container">
 			<div class="contacts__box">
-				<h2 class="contacts__title"><Icon :icon="['fas', 'map-marker-alt']" /> Où se situons-nous ?</h2>
+				<h2 class="contacts__title"><Icon :icon="['fas', 'map-marker-alt']" /> Localisation</h2>
 				<div class="contacts__separator"></div>
 				<div class="contacts__map-box">
 					<p>Map here</p>
@@ -159,7 +159,7 @@ export default {
 }
 
 .contacts__box {
-	width: calc(30%);
+	width: 30%;
 	padding-bottom: 40px;
 }
 
@@ -270,5 +270,20 @@ export default {
 	align-items: center;
 	box-shadow: 0px 0px 1px black;
 	padding: 5px 0;
+}
+
+@media only screen and (max-width: 900px) {
+	.contacts__container {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.contacts__box {
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	.contacts__item {
+		padding: 10px 0;
+	}
 }
 </style>
