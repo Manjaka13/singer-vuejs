@@ -1,0 +1,10 @@
+/*
+	General CSS rules
+*/
+
+html,
+body,
+#app {
+	margin: 0;
+	padding: 0;
+}

@@ -13,6 +13,7 @@ import {
 	faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "./assets/general.css";
 // import VueGallery from "vue-gallery";
 
 library.add(
