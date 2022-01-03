@@ -9,25 +9,22 @@
 			>
 				<header class="modal-header" id="modalTitle">
 					<slot name="header"> This is the default title! </slot>
-					<button type="button" class="btn-close" @click="close">
+					<button type="button" class="button-close" @click="close">
 						<Icon icon="times" />
 					</button>
 				</header>
 
 				<section class="modal-body" id="modalDescription">
 					<slot name="body">
-						<div class="content-left"></div>
-
-						<div class="content-right">
-							<h2 class="title2">Description du produit :</h2>
-							<div class="separator3"></div></div
+						this is the default
+						<body></body
 					></slot>
 				</section>
 
 				<footer class="modal-footer">
 					<button
 						type="button"
-						class="btn-green"
+						class="button-green"
 						@click="close"
 						aria-label="Close modal"
 					>
@@ -103,6 +100,7 @@ export default {
 	background: #e30044;
 }
 
+/**Custome content to display the products' delails */
 .content-left {
 	padding: 10px 50px 10px 50px;
 
@@ -122,8 +120,8 @@ export default {
 	width: 40%;
 	height: 55vh;
 }
-
-.btn-close {
+/**------------------------------------------------- */
+.button-close {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -143,7 +141,7 @@ export default {
 	justify-content: center;
 }
 
-.btn-green {
+.button-green {
 	border: none;
 	color: white;
 	font-size: 12pt;
