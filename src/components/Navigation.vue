@@ -1,5 +1,5 @@
 <template>
-	<nav :class="'navigation' + (menuOpened ? ' navigation--opened' : '')">
+	<nav :class="menuOpened ? 'navigation navigation--opened' : 'navigation'">
 		<div class="container navigation__container">
 			<div class="navigation__logo">
 				<figure class="navigation__logo-box">
@@ -127,7 +127,7 @@ export default {
 }
 
 .navigation--opened .navigation__logo-box:first-child .navigation__image {
-	animation: rotateAnimation 8s linear infinite;
+	animation: rotateAnimation 2s linear infinite;
 }
 
 @media only screen and (max-width: 400px) {

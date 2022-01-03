@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+import Page from "./components/Page.vue";
 import "./assets/general.css";
 
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -30,4 +30,4 @@ import "./assets/general.css";
 // 	faInstagram
 // );
 
-createApp(App)/*.component("Icon", FontAwesomeIcon)*/.mount("#app");
+createApp(Page)/*.component("Icon", FontAwesomeIcon)*/.mount("#app");
