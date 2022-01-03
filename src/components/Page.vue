@@ -61,20 +61,23 @@
 		<p>Filling up space</p>
 		<p>ENDOOOOO !!!!</p>
 
+		<Contacts />
 		<Copyright />
 	</div>
 </template>
 
 <script>
 import Navigation from "./Navigation.vue";
-import Copyright from "./Copyright.vue";
 import Menu from "./Menu.vue";
+import Contacts from "./Contacts.vue";
+import Copyright from "./Copyright.vue";
 
 export default {
 	name: "Page",
 	components: {
 		Navigation,
 		Menu,
+		Contacts,
 		Copyright
 	},
 	data() {

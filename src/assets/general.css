@@ -8,14 +8,15 @@ body,
 	margin: 0;
 	padding: 0;
 	background: rgb(245, 245, 245);
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 p,
 ul,
-h1 {
+h1,
+h2 {
 	padding: 0;
 	margin: 0;
 }
