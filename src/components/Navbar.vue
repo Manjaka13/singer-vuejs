@@ -1,22 +1,20 @@
 <template>
-	<div class="container">
-		<div class="logo-box">
-			<figure class="logo-1">
-				<img
-					class="logo-image"
-					src="../images/singer-france.png"
-					alt="Logo Singer France"
-				/>
-			</figure>
-			<figure class="logo-2">
-				<img
-					class="logo-image"
-					src="../images/singer-france-text.png"
-					alt="Logo Texte Singer France"
-				/>
-			</figure>
-		</div>
-	</div>
+	<nav class="navbar">
+		<figure class="navbar__logo">
+			<img
+				class="navbar__image"
+				src="../images/singer-france.png"
+				alt="Logo Singer France"
+			/>
+		</figure>
+		<figure class="navbar__logo">
+			<img
+				class="navbar__image"
+				src="../images/singer-france-text.png"
+				alt="Logo Texte Singer France"
+			/>
+		</figure>
+	</nav>
 </template>
 
 <script>
@@ -30,11 +28,14 @@ export default {
 	Navbar
 */
 
-.container {
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-	height: 80px;
+	height: 76px;
 	overflow: hidden;
-	box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.7);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -42,20 +43,11 @@ export default {
 	background: #e30044;
 }
 
-.logo-box {
-	display: flex;
-	justify-content: center;
-	height: 100%;
+.navbar__logo {
 	margin: 0;
 }
 
-.logo-1,
-.logo-2 {
-	display: inline-block;
-	margin: 5px 0 0 0;
-}
-
-.logo-image {
-	width: 80%;
+.navbar__image {
+	width: 70%;
 }
 </style>
