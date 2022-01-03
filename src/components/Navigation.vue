@@ -130,4 +130,13 @@ export default {
 	animation: rotateAnimation 8s linear infinite;
 }
 
+@media only screen and (max-width: 400px) {
+	.navigation__logo {
+		height: 50%;
+	}
+	.navigation__logo-box:first-child {
+		display: none;
+	}
+}
+
 </style>
