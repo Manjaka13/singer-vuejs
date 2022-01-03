@@ -46,12 +46,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="container contacts__bottom">
+		<!-- <div class="container contacts__bottom">
 			<div class="contacts__bottom-separator"></div>
 			<p class="contacts__bottom-phrase">Singer, la marque de référence en matière de couture : 165 ans de savoir-faire et de notoriété grâce à la qualité, la technologie et la longévité de ses machines à coudre. Notre marque propose aujourd’hui une large gamme de machines à coudre, brodeuses, surjeteuses et accessoires couture.</p>
 			<p class="contacts__bottom-phrase">Singer bénéficie surtout d’une organisation constituée de professionnels au service de la créativité et du confort de leurs utilisatrices couvrant la quasi-totalité du territoire français. Conseils, démonstrations, formations ou encore cours de couture sont autant d’atouts qui participent à la qualité du service de l’enseigne.</p>
 			<p class="contacts__bottom-phrase">Imaginez, créez, recyclez, customisez sans limite avec les machines à coudre SINGER : « Elles ont la technique, vous avez du talent ! »</p>
-		</div>
+		</div> -->
 	</section>
 </template>
 
