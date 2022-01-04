@@ -1,5 +1,5 @@
 <template>
-	<section class="choix-machine">
+	<section class="section choix-machine">
 		<div class="container choix-machine__container">
 			<div class="section-title">
 				<div class="vertical-bar"></div>
@@ -96,7 +96,7 @@ export default {
 .choixmachine__list {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 0;
+	padding: 20px 0 0 0;
 	flex-wrap: wrap;
 }
 

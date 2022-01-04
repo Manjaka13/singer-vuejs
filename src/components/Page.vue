@@ -4,65 +4,12 @@
 			:menuOpened="menuOpened"
 			@menuToggle="menuToggle"
 		/>
-		
-		<!-- Sitemap -->
 		<Menu
 			:menuOpened="menuOpened"
 			@menuToggle="menuToggle"
 		/>
-
 		<ChoixMachine />
-
-
-		<p>STARTOOOO !!!!</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>Filling up space</p>
-		<p>ENDOOOOO !!!!</p>
-
+		<ListeProduit />
 		<Contacts />
 		<Copyright />
 	</div>
@@ -72,6 +19,7 @@
 import Navigation from "./Navigation.vue";
 import Menu from "./Menu.vue";
 import ChoixMachine from "./ChoixMachine.vue";
+import ListeProduit from "./ListeProduit.vue";
 import Contacts from "./Contacts.vue";
 import Copyright from "./Copyright.vue";
 
@@ -82,6 +30,7 @@ export default {
 		Menu,
 		Contacts,
 		ChoixMachine,
+		ListeProduit,
 		Copyright
 	},
 	data() {
@@ -92,7 +41,6 @@ export default {
 	methods: {
 		menuToggle() {
 			this.menuOpened = !this.menuOpened;
-			console.log("Toggle");
 		}
 	}
 };
@@ -104,6 +52,5 @@ export default {
 	height: calc(100vh - 76px);
 	overflow: auto;
 	padding-top: 76px;
-	box-shadow: 0px 0px 10px lime inset;
 }
 </style>

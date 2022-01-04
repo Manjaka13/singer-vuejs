@@ -16,7 +16,9 @@ body,
 p,
 ul,
 h1,
-h2 {
+h2,
+h3,
+figure {
 	padding: 0;
 	margin: 0;
 }
@@ -52,10 +54,14 @@ a {
 	Section styles
 */
 
+.section {
+	padding: 76px 0 0 0;
+}
+
 .section-title {
 	display: flex;
 	align-items: center;
-	padding: 40px 0 40px 0;
+	padding-bottom: 20px;
 }
 
 .section-title .vertical-bar {
