@@ -1,5 +1,5 @@
 <template>
-	<section :class="menuOpened ? 'menu menu--opened' : 'menu'" @click="triggerClicked">
+	<section :class="menuOpened ? 'menu menu--opened' : 'menu'" @click="delayedTriggerClicked">
 		<div class="menu__window">
 			<div class="container menu__container">
 				<h1 class="menu__title">Singer Chantepie</h1>
@@ -81,8 +81,13 @@ export default {
 	},
 	methods: {
 		triggerClicked(e) {
-			e.preventDefault();
+			e?.preventDefault();
 			this.$emit("menuToggle");
+		},
+		delayedTriggerClicked() {
+			setTimeout(() => {
+				this.triggerClicked();
+			}, 100);
 		}
 	}
 };
