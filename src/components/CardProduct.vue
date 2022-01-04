@@ -37,7 +37,7 @@ export default {
 	overflow: hidden;
 	background: white;
 	box-shadow: 0px 0px 1px black;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1380px) {
@@ -174,7 +174,7 @@ export default {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
-	/*max-height: 47px;*/
+	min-height: 72px;
 }
 
 .card-product__discover-box {
