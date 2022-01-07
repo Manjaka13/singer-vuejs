@@ -1,5 +1,10 @@
 <template>
-	<section id="produit" :class="`section ${done === 4 ? 'liste-produit' : 'liste-produit liste-produit--empty'}`">
+	<section
+		id="produit"
+		:class="`section ${
+			done === 4 ? 'liste-produit' : 'liste-produit liste-produit--empty'
+		}`"
+	>
 		<div class="container liste-produit__container">
 			<!-- <div class="section-title">
 				<div class="vertical-bar"></div>
@@ -19,34 +24,93 @@
 							<h2 class="title">Nos produits</h2>
 							<div class="search">
 								<Icon class="icon" icon="search" />
-								<input class="input" type="search" placeholder="Rechercher" />
+								<input
+									class="input"
+									type="search"
+									placeholder="Rechercher"
+								/>
 							</div>
 						</div>
 						<div class="liste-produit__separator"></div>
 						<div class="filter">
 							<div class="filter-item filter-all">
-								<input class="checkbox" type="radio" id="filter-all" name="filter" :checked="filter.all" @change="(e) => handleCheckbox(e, 'all')" />
-								<label for="filter-all"> Tous les produits</label>
+								<input
+									class="checkbox"
+									type="radio"
+									id="filter-all"
+									name="filter"
+									:checked="filter.all"
+									@change="(e) => handleCheckbox(e, 'all')"
+								/>
+								<label for="filter-all">
+									Tous les produits</label
+								>
 							</div>
 							<div class="filter-item filter-mecanique">
-								<input class="checkbox" type="radio" id="filter-mecanique" name="filter" :checked="filter.mecanique" @change="(e) => handleCheckbox(e, 'mecanique')" />
-								<label for="filter-mecanique"> Machine à coudre mécanique</label>
+								<input
+									class="checkbox"
+									type="radio"
+									id="filter-mecanique"
+									name="filter"
+									:checked="filter.mecanique"
+									@change="
+										(e) => handleCheckbox(e, 'mecanique')
+									"
+								/>
+								<label for="filter-mecanique">
+									Machine à coudre mécanique</label
+								>
 							</div>
 							<div class="filter-item filter-electronique">
-								<input class="checkbox" type="radio" id="filter-electronique" name="filter" :checked="filter.electronique" @change="(e) => handleCheckbox(e, 'electronique')" />
-								<label for="filter-electronique"> Machine à coudre électronique</label>
+								<input
+									class="checkbox"
+									type="radio"
+									id="filter-electronique"
+									name="filter"
+									:checked="filter.electronique"
+									@change="
+										(e) => handleCheckbox(e, 'electronique')
+									"
+								/>
+								<label for="filter-electronique">
+									Machine à coudre électronique</label
+								>
 							</div>
 							<div class="filter-item filter-brodeuse">
-								<input class="checkbox" type="radio" id="filter-brodeuse" name="filter" :checked="filter.brodeuse" @change="(e) => handleCheckbox(e, 'brodeuse')" />
+								<input
+									class="checkbox"
+									type="radio"
+									id="filter-brodeuse"
+									name="filter"
+									:checked="filter.brodeuse"
+									@change="
+										(e) => handleCheckbox(e, 'brodeuse')
+									"
+								/>
 								<label for="filter-brodeuse"> Brodeuse</label>
 							</div>
 							<div class="filter-item filter-surjeteuse">
-								<input class="checkbox" type="checkbox" id="filter-surjeteuse" name="filter" :checked="filter.surjeteuse" @change="(e) => handleCheckbox(e, 'surjeteuse')" />
-								<label for="filter-surjeteuse"> Surjeteuse</label>
+								<input
+									class="checkbox"
+									type="radio"
+									id="filter-surjeteuse"
+									name="filter"
+									:checked="filter.surjeteuse"
+									@change="
+										(e) => handleCheckbox(e, 'surjeteuse')
+									"
+								/>
+								<label for="filter-surjeteuse">
+									Surjeteuse</label
+								>
 							</div>
 						</div>
 					</div>
-					<CardProduct v-for="item in display" :key="item.id" :product="item" />
+					<CardProduct
+						v-for="item in display"
+						:key="item.id"
+						:product="item"
+					/>
 				</div>
 			</div>
 		</div>
@@ -60,7 +124,7 @@ import {
 	getMecanique,
 	getElectronique,
 	getBrodeuse,
-	getSurjeteuse
+	getSurjeteuse,
 } from "../service/";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as Icon } from "@fortawesome/vue-fontawesome";
@@ -73,7 +137,7 @@ export default {
 	components: {
 		Loading,
 		CardProduct,
-		Icon
+		Icon,
 	},
 	data() {
 		return {
@@ -82,7 +146,7 @@ export default {
 				mecanique: false,
 				electronique: false,
 				brodeuse: false,
-				surjeteuse: false
+				surjeteuse: false,
 			},
 			done: 0,
 			liste: {
@@ -96,9 +160,10 @@ export default {
 				id: "cb02d891-bcec-4db0-80d9-1a07565e4e4a",
 				type: "machine-a-coudre-mecanique",
 				title: "SUPERA 5523",
-				description: "Cette gamme de machines à coudre possède de nombreux atouts : coudre des épaisseurs, du jean, des tissus d’ameublement, des toiles cirées ainsi que toutes les coutures traditionnelles. Avec un cadre métallique intérieur robuste, une semelle en acier inoxydable, une vitesse de couture extra-haute et un moteur puissant, cette machine est votre alliée de tous les jours.",
+				description:
+					"Cette gamme de machines à coudre possède de nombreux atouts : coudre des épaisseurs, du jean, des tissus d’ameublement, des toiles cirées ainsi que toutes les coutures traditionnelles. Avec un cadre métallique intérieur robuste, une semelle en acier inoxydable, une vitesse de couture extra-haute et un moteur puissant, cette machine est votre alliée de tous les jours.",
 				photo: [
-				"https://res.cloudinary.com/dctlti6fj/image/upload/v1639919121/produits/mecanique/Supera-5523-1_rvfxvh.png"
+					"https://res.cloudinary.com/dctlti6fj/image/upload/v1639919121/produits/mecanique/Supera-5523-1_rvfxvh.png",
 				],
 				details: [
 					"23 programmes de points",
@@ -106,62 +171,62 @@ export default {
 					"3 positions d’aiguille",
 					"Boutonnière automatique 1 temps",
 					"Bras libre pour couture circulaire",
-					"Enfile-aiguille automatique"
+					"Enfile-aiguille automatique",
 				],
 				promotion: {
 					type: "reduction",
 					name: "Réduction de 45%",
-					value: "45%"
+					value: "45%",
 				},
-				outstock: true
-			}
+				outstock: true,
+			},
 		};
 	},
 	mounted() {
-		getMecanique().then(data => {
+		getMecanique().then((data) => {
 			this.liste = {
 				...this.liste,
-				mecanique: [...data]
+				mecanique: [...data],
 			};
-			this.done ++;
+			this.done++;
 		});
-		getElectronique().then(data => {
+		getElectronique().then((data) => {
 			this.liste = {
 				...this.liste,
-				electronique: [...data]
+				electronique: [...data],
 			};
-			this.done ++;
+			this.done++;
 		});
-		getBrodeuse().then(data => {
+		getBrodeuse().then((data) => {
 			this.liste = {
 				...this.liste,
-				brodeuse: [...data]
+				brodeuse: [...data],
 			};
-			this.done ++;
+			this.done++;
 		});
-		getSurjeteuse().then(data => {
+		getSurjeteuse().then((data) => {
 			this.liste = {
 				...this.liste,
-				surjeteuse: [...data]
+				surjeteuse: [...data],
 			};
-			this.done ++;
+			this.done++;
 		});
 	},
 	methods: {
 		handleCheckbox(e, name) {
 			const status = e.target.checked;
 			this.display = [];
-			if(name === "all" && status === true) {
+			if (name === "all" && status === true) {
 				this.filter = {
 					all: true,
 					mecanique: false,
 					electronique: false,
 					brodeuse: false,
-					surjeteuse: false
+					surjeteuse: false,
 				};
 			}
-		}
-	}
+		},
+	},
 };
 </script>
 
