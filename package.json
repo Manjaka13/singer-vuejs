@@ -17,7 +17,9 @@
 		"core-js": "^3.6.5",
 		"leaflet": "^1.7.1",
 		"swiper": "6.8.4",
-		"vue": "^3.0.0"
+		"vue": "^3.0.0",
+		"vue-carousel-3d": "^1.0.1",
+		"vueperslides": "^3.3.2"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.5.0",

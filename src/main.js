@@ -30,4 +30,6 @@ import "./assets/general.css";
 // 	faInstagram
 // );
 
-createApp(Page)/*.component("Icon", FontAwesomeIcon)*/.mount("#app");
+createApp(Page)
+	/*.component("Icon", FontAwesomeIcon)*/
+	.mount("#app");
