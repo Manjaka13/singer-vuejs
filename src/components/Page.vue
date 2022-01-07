@@ -1,15 +1,11 @@
 <template>
 	<div class="page">
-		<Navigation
-			:menuOpened="menuOpened"
-			@menuToggle="menuToggle"
-		/>
-		<Menu
-			:menuOpened="menuOpened"
-			@menuToggle="menuToggle"
-		/>
+		<Navigation :menuOpened="menuOpened" @menuToggle="menuToggle" />
+		<Menu :menuOpened="menuOpened" @menuToggle="menuToggle" />
+		<Promotion />
 		<ChoixMachine />
 		<ListeProduit />
+		<ServiceClient />
 		<Contacts />
 		<Copyright />
 	</div>
@@ -22,6 +18,8 @@ import ChoixMachine from "./ChoixMachine.vue";
 import ListeProduit from "./ListeProduit.vue";
 import Contacts from "./Contacts.vue";
 import Copyright from "./Copyright.vue";
+import ServiceClient from "./ServiceClient.vue";
+import Promotion from "./Promotion.vue";
 
 export default {
 	name: "Page",
@@ -31,18 +29,20 @@ export default {
 		Contacts,
 		ChoixMachine,
 		ListeProduit,
-		Copyright
+		Copyright,
+		ServiceClient,
+		Promotion,
 	},
 	data() {
 		return {
-			menuOpened: false
+			menuOpened: false,
 		};
 	},
 	methods: {
 		menuToggle() {
 			this.menuOpened = !this.menuOpened;
-		}
-	}
+		},
+	},
 };
 </script>
 
