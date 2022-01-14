@@ -20,7 +20,7 @@ export default {
 			url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 			attribution:
 				'&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-			zoom: 15,
+			zoom: 18,
 			center: [48.08930332178957, -1.6213132083998467],
 			markerLatLng: [48.08930332178957, -1.6213132083998467],
 		};
