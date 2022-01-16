@@ -1,5 +1,5 @@
 <template>
-	<section class="section promotion">
+	<section id="promo" class="section promotion">
 		<div class="container promotion__container">
 			<div class="section-title">
 				<div class="vertical-bar"></div>
