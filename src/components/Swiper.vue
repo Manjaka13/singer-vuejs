@@ -1,75 +1,146 @@
 <template>
-	<swiper
+	<div class="swiper">
+		<div class="swiper swiper__container">
+			<button type="button" class="swiper-button button-left">
+				<Icon :icon="['fas', 'chevron-left']" />
+			</button>
+
+			<div class="swiper-slide">
+				<figure class="swiper-figure">
+					<img
+						class="swiper-image"
+						src="https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg"
+					/>
+					<!-- <img
+						src="https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg"
+						alt="Photo des produits singer"
+						class="swiper-image"
+					/>
+
+					<img
+						src="https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg"
+						alt="Photo des produits singer"
+						class="swiper-image"
+					/>
+
+					<img
+						src="https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg"
+						alt="Photo des produits singer"
+						class="swiper-image"
+					/> -->
+				</figure>
+			</div>
+			<button type="button" class="swiper-button button-right">
+				<Icon :icon="['fas', 'chevron-right']" />
+			</button>
+		</div>
+	</div>
+	<!-- <swiper
+		:slides-per-view="3"
+		:space-between="50"
+		@swiper="onSwiper"
+		@slideChange="onSlideChange"
+		virtual
+	>
+		<swiper-slide class="swiper-slide" v-for="image in images" :key="image">
+			<figure class="swiper-figure">
+				<img class="swiper-image" :src="image.src" alt="" />
+			</figure>
+		</swiper-slide>
+
+		<button type="button" class="swiper-button button-left">
+			<Icon :icon="['fas', 'chevron-left']" />
+		</button>
+
+		<button type="button" class="swiper-button button-right">
+			<Icon :icon="['fas', 'chevron-right']" />
+		</button>
+	</swiper>
+ -->
+	<!-- <swiper
+		ref="swiper"
+		class="swiper__container"
 		:modules="modules"
-		:slides-per-view="2"
-		:space-between="30"
+		:slides-per-view="1"
+		:space-between="1"
 		:options="swiperOptions"
-		navigation
 		:autoplay="true"
 		:pagination="{ clickable: true }"
 		:scrollbar="{ draggable: true }"
 	>
-		<swiper-slide>
-			<figure class="swiper-slide__figure">
-				<img
-					class="swiper__image"
-					src="https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg"
-					alt=""
-				/>
+		<swiper-slide class="swiper-slide" v-for="image in images" :key="image">
+			<figure class="swiper-figure">
+				<img class="swiper-image" :src="image.src" alt="" />
 			</figure>
 		</swiper-slide>
-		<swiper-slide
-			><figure class="swiper-slide__figure">
+		<swiper-slide class="swiper-slide"
+			><figure class="swiper-figure">
 				<img
-					class="swiper__image"
+					class="swiper-image"
 					src="https://i.ytimg.com/vi/7m0IUJS-LOY/maxresdefault.jpg"
 					alt=""
 				/></figure
 		></swiper-slide>
-		<swiper-slide
-			><figure class="swiper-slide__figure">
+
+		<swiper-slide class="swiper-slide"
+			><figure class="swiper-igure">
 				<img
-					class="swiper__image"
-					src="http://pm1.narvii.com/6993/c5313db21e65af45280b7dfb258b8631749d7cb3r1-707-1000v2_00.jpg"
-				/></figure
-		></swiper-slide>
-		<swiper-slide
-			><figure class="swiper-slide__figure">
-				<img
-					class="swiper__image"
+					class="swiper-image"
 					src="https://i.pinimg.com/736x/f7/f9/72/f7f9728561e72cf987a1f07b75182fcf.jpg"
 				/></figure
 		></swiper-slide>
-	</swiper>
+
+		<button type="button" class="swiper-button button-left">
+			<Icon :icon="['fas', 'chevron-left']" />
+		</button>
+
+		<button type="button" class="swiper-button button-right">
+			<Icon :icon="['fas', 'chevron-right']" />
+		</button>
+	</swiper> -->
 </template>
 <script>
-// import Swiper core and required modules
+/* import SwiperCore, { Virtual } from "swiper";
+
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide } from "swiper/vue"; */
 
-// Import Swiper styles
 import "swiper/swiper-bundle.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon as Icon } from "@fortawesome/vue-fontawesome";
+import {
+	faChevronLeft,
+	faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
-// Import Swiper styles
+library.add(faChevronLeft, faChevronRight);
+/* SwiperCore.use([Virtual]);
+ */
 export default {
 	components: {
-		Swiper,
-		SwiperSlide,
+		/* Swiper,
+		SwiperSlide, */
+		Icon,
 	},
 
 	data() {
 		return {
-			swiperOptions: {
+			/* swiperOptions: {
 				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
+					nextEl: ".button-left",
+					prevEl: ".button-right",
 				},
-			},
+			}, */
+
+			images: [
+				{ src: "https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg" },
+				{ src: "https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg" },
+				{ src: "https://i.ytimg.com/vi/MMtsZGq-fpg/maxresdefault.jpg" },
+			],
 		};
 	},
-
+	/* 
 	methods: {
 		prev() {
 			this.$refs.swiper.$swiper.slidePrev();
@@ -82,18 +153,59 @@ export default {
 		return {
 			modules: [Navigation, Pagination, Scrollbar, A11y],
 		};
-	},
+	}, */
 };
 </script>
 
 <style lang="css">
-.swiper-slide__figure {
-	display: flex;
-	width: 100%;
-	height: 100%;
+.swiper__container {
+	border-radius: 10px;
+	background: black;
+	overflow: hidden;
+	position: relative;
 }
-.swiper__image {
+
+.swiper-slide {
+	display: flex;
+}
+
+.swiper-figure > img {
+	margin: auto;
+	display: flex;
+}
+
+.swiper-image {
+	position: absolute;
 	width: 100%;
 	height: 100%;
+	text-align: center;
+	display: flex;
+}
+.swiper-button {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	background: #e30044;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-left {
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.button-right {
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 </style>

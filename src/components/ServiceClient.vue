@@ -69,17 +69,19 @@
 						Dans les magasins Singer France, vous trouverez :
 					</p>
 
-					<ul class="list">
-						<li class="list__item">Des conseils démonstrations</li>
-						<li class="list__item">
+					<ul class="lamarque__list">
+						<li class="lamarque__list-item">
+							Des conseils démonstrations
+						</li>
+						<li class="lamarque__list-item">
 							Des formations sur des machines spécifiquess
 						</li>
-						<li class="list__item">
+						<li class="lamarque__list-item">
 							Des ateliers de couture assurés par des
 							professionnels
 						</li>
-						<li class="list__item">De la mercerie</li>
-						<li class="list__item">
+						<li class="lamarque__list-item">De la mercerie</li>
+						<li class="lamarque__list-item">
 							Un service d’entretien de réparation de machines à
 							coudre toutes marques
 						</li>
@@ -182,12 +184,12 @@ export default {
 	line-height: 25px;
 }
 
-.list {
+.lamarque__list {
 	list-style-type: disc;
 	padding: 0 0 0 50px;
 }
 
-.list__item {
+.lamarque__list-item {
 	padding: 5px 0;
 	color: rgb(80, 80, 80);
 }

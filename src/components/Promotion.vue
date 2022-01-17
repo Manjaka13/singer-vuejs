@@ -15,7 +15,6 @@
 			</p>
 
 			<div class="promotion__box">
-				<!--<Hopper />-->
 				<Swiper />
 			</div>
 		</div>
@@ -24,15 +23,11 @@
 
 <script>
 import Swiper from "./Swiper.vue";
-/*
-	Entry point for vue components
-*/
-//import Hopper from "./Hooper.vue";
+
 export default {
 	name: "Promotion",
 	components: {
 		Swiper,
-		//Hopper,
 	},
 };
 </script>
@@ -43,8 +38,7 @@ export default {
 
 .promotion__box {
 	display: flex;
-	width: 100%;
+	width: 60%;
 	height: 500px;
-	object-fit: contain;
 }
 </style>
